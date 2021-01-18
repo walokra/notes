@@ -1,9 +1,18 @@
 # Todo
 
-- [x] This is an example of a todo list item that's complete
-- [x] Todo lists are useful for keeping organised and focused
-- [ ] This one is not completed yet
-- [ ] You can mark it completed by pressing `Option`+`C` (or `Alt`+`C`) when your cursor is on this line
-  - [ ] You can also select multiple lines and mark them all at once!
-- [ ] When you press enter at the end of a line, it adds a new todo item on the next line
-- [ ] This, and more is provided by the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) plugin by [Yu Zhang](https://github.com/yzhang-gh)
+## Blog posts
+
+- [ ] Headless Electron test on GitLab
+- [ ] Node security
+- [ ] Optimize PostgreSQL for OLAP
+- [ ] Kubernetes security notes
+- [ ] GitLab runner on Kubernetes configmap
+- [ ] Python and adjust cell width on Excel sheet
+- [ ] Sonar Scanner with NPM
+- [ ] S3 Bucket Listing
+- [ ] Vouch Proxy
+- [ ] Git stuff: clone repo and add as remote
+- [ ] The Joy and Pain of Developing Infrastructure Automation
+- [ ] GitLab Runner cache on Kubernetes
+- [ ] History tables on database
+- [ ] Security Headers with PHP and Apache
