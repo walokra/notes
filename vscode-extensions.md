@@ -7,7 +7,7 @@ Visual Studio Code has become The Editor for many and it has many extensions whi
 [editorconfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 `ext install EditorConfig`
 
-[Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.VSIntelliCode)
+[Visual Studio IntelliCode](https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode)
 
 [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) or [Git Blame](https://marketplace.visualstudio.com/items?itemName=waderyan.gitblame)
 
@@ -15,13 +15,19 @@ Visual Studio Code has become The Editor for many and it has many extensions whi
 
 ## Language and technology specific
 
-[ESlint](https://github.com/Microsoft/vscode-eslint)
+[ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
+[Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+
+[PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+
 [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+
+[Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
 [Markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
@@ -31,18 +37,24 @@ Visual Studio Code has become The Editor for many and it has many extensions whi
 
 [PlantUML](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml)
 
+[HashiCorp Terraform](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform)
+
 ## Database
 
 [PostgreSQL](https://marketplace.visualstudio.com/items?itemName=ckolkman.vscode-postgres)
 
 [MongoDB](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
 
-[GraphQL](https://marketplace.visualstudio.com/items?itemName=kumar-harsh.graphql-for-vscode)
+[GraphQL](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql)
+[GraphQL for VSCode](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql)
+Apollo GraphQL for VS Code(https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo)
+Rich editor support for GraphQL client and server development that seamlessly integrates with the Apollo platform.
 
 ## Javascript
 
-- [Babel](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel): JavaScript syntax highlighting for ES201x, React JSX, Flow and GraphQL.
-- [jest] (https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+[Babel](https://marketplace.visualstudio.com/items?itemName=mgmcdermott.vscode-language-babel): JavaScript syntax highlighting for ES201x, React JSX, Flow and GraphQL.
+
+[jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
 
 ## User Interface specific
 
