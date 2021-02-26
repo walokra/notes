@@ -1,44 +1,42 @@
-# Monolog
+# PHP stuff
+
+## Monolog
 
 <https://stackoverflow.com/questions/24450180/monolog-how-to-log-php-array-into-console>
 
 ```php
-$array = var_dump($commonNurseGroups);
-$this->container->logger->addWarning("############ commonNurseGroups: " . print_r($commonNurseGroups, true));
-        $this->container->logger->addWarning("canPerformParticipantAction");
-        $this->container->logger->addWarning("" . print_r($currentUser));
-        $this->container->logger->addWarning("userId", $userId);
-        $this->container->logger->addWarning("userId", $reservationId);
-        $this->container->logger->addWarning("userId", $action);
+$array = var_dump($groups);
+$this->container->logger->addWarning("# groups: " . print_r($groups, true));
+$this->container->logger->addWarning("Foo Bar");
+$this->container->logger->addWarning("" . print_r($currentUser, true));
+$this->container->logger->addWarning("user", $user);
  
 ```
+## Log SQL Queries 
 
-## Static Analysis
+With Eloquent and Monolog:
 
-### PHPStan - PHP Static Analysis Tool
+```php
+// Listen for Query Events for Debug
+$this->container->db->getConnection()->setEventDispatcher(new \Illuminate\Events\Dispatcher);
+$this->container->db->getConnection()->listen(function ($query) {
 
-```shell
-docker run -it --rm -v $(pwd):/project -w /project jakzal/phpqa:php7.4-alpine phpstan analyse --level 1 src
-```
+    // Format binding data for sql insertion
+    foreach ($query->bindings as $i => $binding) {
+        if ($binding instanceof \DateTime) {
+            $query->bindings[$i] = $binding->format('\'Y-m-d H:i:s\'');
+        } else {
+            if (is_string($binding)) {
+                $query->bindings[$i] = "'$binding'";
+            }
+        }
+    }
 
-### PHPDepend
+    // Insert bindings into query
+    $boundSql = str_replace(['%', '?'], ['%%', '%s'], $query->sql);
+    $boundSql = vsprintf($boundSql, $query->bindings);
+    // UNBOUND QUERY = " . $query->sql
 
-<http://pdepend.org/documentation/getting-started.html>
-
-```shell
-./vendor/bin/pdepend --summary-xml=./summary.xml --jdepend-chart=./jdepend.svg --overview-pyramid=./pyramid.svg ./src
-```
-
-### PHPMD: PHP Mess Detector
-
-<https://phpmd.org/rules/index.html>
-<https://hub.docker.com/r/jakzal/phpqa/>
-<https://github.com/jakzal/toolbox>
-
-Docker container
-
-```shell
-docker pull jakzal/phpqa
-docker run -it --rm -v $(pwd):/project -w /project jakzal/phpqa \
-    phpmd src html cleancode,codesize,controversial,design,naming,unusedcode --reportfile phpmd.html
+    $this->container->logger->debug("### SQL: time=" . $query->time . "ms; " . $boundSql . "###");
+});
 ```
