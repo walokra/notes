@@ -13,6 +13,8 @@ Visual Studio Code has become The Editor for many and it has many extensions whi
 
 [Local History](https://marketplace.visualstudio.com/items?itemName=xyz.local-history)
 
+[WorkspaceSort](https://marketplace.visualstudio.com/items?itemName=iciclesoft.workspacesort): WorkspaceSort adds the ability to sort workspace-folders in the same way as files and inner-folders are sorted.
+
 ## Language and technology specific
 
 [ESlint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)

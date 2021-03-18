@@ -21,3 +21,8 @@ const installExtensions = async () => {
     .catch((err) => console.error('An error occurred: ', err));
 };
 ```
+
+## Media devices
+
+https://github.com/electron/electron/issues/16513
+https://github.com/electron/electron/issues/4931

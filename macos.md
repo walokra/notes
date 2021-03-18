@@ -1,4 +1,4 @@
-# macos
+# macOS
 
 ## VS Code’s in-built terminal is slow or laggy on MacOS Big Sur
 
