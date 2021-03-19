@@ -11,6 +11,11 @@
 - [[electron]] - Electron notes
 - [[macos]] - macOS related notes
 - [[git]] - Git notes
+- [[e2e-testing]] - e2e testing
+
+## Documentation
+
+- [[diagram-tools]] - Draw diagrams
 
 ## PHP
 
@@ -31,6 +36,8 @@
 [electron]: electron "Electron"
 [macos]: macos "macOS"
 [git]: git "Git"
+[e2e-testing]: e2e-testing "e2e testing"
+[diagram-tools]: diagram-tools "Diagram drawing tools"
 [php]: php "PHP stuff"
 [php-analysis]: php-analysis "PHP and Static Analysis"
 [php-xdebug]: php-xdebug "PHP and XDebug"
