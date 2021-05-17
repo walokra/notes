@@ -12,6 +12,8 @@
 - [[macos]] - macOS related notes
 - [[git]] - Git notes
 - [[e2e-testing]] - e2e testing
+- [[sre]] - Site reliability engineering
+- [[graphql]] - GraphQL  
 
 ## Documentation
 
@@ -37,6 +39,8 @@
 [macos]: macos "macOS"
 [git]: git "Git"
 [e2e-testing]: e2e-testing "e2e testing"
+[sre]: sre "Site Reliability Engineering"
+[graphql]: graphql "GraphQL"
 [diagram-tools]: diagram-tools "Diagram drawing tools"
 [php]: php "PHP stuff"
 [php-analysis]: php-analysis "PHP and Static Analysis"
