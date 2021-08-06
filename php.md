@@ -40,3 +40,13 @@ $this->container->db->getConnection()->listen(function ($query) {
     $this->container->logger->debug("### SQL: time=" . $query->time . "ms; " . $boundSql . "###");
 });
 ```
+
+## Strip special characters
+
+```php
+$imageUrl = $params['image_url'];
+// Minio doesn't accept filenames with special characters
+$imageUrl = str_replace(' ', '-', $imageUrl); // Replaces all spaces with hyphens.
+$imageUrl = preg_replace('/[^A-Za-z0-9\-:]/', '', $imageUrl); // Removes special chars.
+$imageUrl = preg_replace('/-+/', '-', $imageUrl); // Replaces multiple hyphens with single one.
+```

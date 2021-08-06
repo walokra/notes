@@ -13,7 +13,15 @@
 - [[git]] - Git notes
 - [[e2e-testing]] - e2e testing
 - [[sre]] - Site reliability engineering
-- [[graphql]] - GraphQL  
+- [[graphql]] - GraphQL
+- [[css]] - CSS
+- [[jitsi]] - Jitsi
+- [[playwright]] - Playwright e2e testing
+- [[openapi]] - OpenAPI generation
+
+## Learning
+
+- [[infosec]] - Information Security
 
 ## Documentation
 
@@ -41,6 +49,11 @@
 [e2e-testing]: e2e-testing "e2e testing"
 [sre]: sre "Site Reliability Engineering"
 [graphql]: graphql "GraphQL"
+[css]: css "CSS"
+[jitsi]: jitsi "Jitsi"
+[playwright]: playwright "Playwright"
+[openapi]: openapi "OpenAPI generation"
+[infosec]: infosec "Information security"
 [diagram-tools]: diagram-tools "Diagram drawing tools"
 [php]: php "PHP stuff"
 [php-analysis]: php-analysis "PHP and Static Analysis"
