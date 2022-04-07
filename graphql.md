@@ -8,21 +8,22 @@
 ## Apollo Client, retrying
 
 Refresh token and retry failed call:
+
 - <https://able.bio/AnasT/apollo-graphql-async-access-token-refresh--470t1c8#>
 - <https://github.com/AnasT/jwt-auth-poc/blob/master/client/src/graphql/index.ts>
 
 ## Validating and linting GraphQL
 
-* [eslint-plugin-graphql](https://github.com/apollographql/eslint-plugin-graphql): 
-checks tagged query strings inside JavaScript, or queries inside .graphql files, against a GraphQL schema.
-* [graphql-schema-linter](https://github.com/cjoudrey/graphql-schema-linter): 
-command line tool to validate GraphQL schema definitions against a set of rules.
-* [graphql-eslint](https://github.com/dotansimha/graphql-eslint): 
- Lints both GraphQL schema and GraphQL operations.
+- [eslint-plugin-graphql](https://github.com/apollographql/eslint-plugin-graphql):
+  checks tagged query strings inside JavaScript, or queries inside .graphql files, against a GraphQL schema.
+- [graphql-schema-linter](https://github.com/cjoudrey/graphql-schema-linter):
+  command line tool to validate GraphQL schema definitions against a set of rules.
+- [graphql-eslint](https://github.com/dotansimha/graphql-eslint):
+  Lints both GraphQL schema and GraphQL operations.
 
-GraphQL APIs are required to be self-documenting and every GraphQL API needs to respond to queries about its own structure. 
-This system is called introspection. 
-The key for GraphQL validation is doing the introspection query and getting the schema in GraphQL Schema Definition Language format. 
+GraphQL APIs are required to be self-documenting and every GraphQL API needs to respond to queries about its own structure.
+This system is called introspection.
+The key for GraphQL validation is doing the introspection query and getting the schema in GraphQL Schema Definition Language format.
 The query gets you the JSON representation of the shape of the API which you can convert to SDL.
 See [more about GraphQL Schemas](https://www.apollographql.com/blog/backend/schema-design/three-ways-to-represent-your-graphql-schema/).
 
@@ -38,12 +39,12 @@ Create config `graphql-schema-linter.config.js` in your project
 
 ```javascript
 module.exports = {
-  rules: ['enum-values-sorted-alphabetically'],
-  schemaPaths: ['path/to/my/schema/files/**.graphql'],
-  customRulePaths: ['path/to/my/custom/rules/*.js'],
+  rules: ["enum-values-sorted-alphabetically"],
+  schemaPaths: ["path/to/my/schema/files/**.graphql"],
+  customRulePaths: ["path/to/my/custom/rules/*.js"],
   rulesOptions: {
-    'enum-values-sorted-alphabetically': { sortOrder: 'lexicographical' }
-  }
+    "enum-values-sorted-alphabetically": { sortOrder: "lexicographical" },
+  },
 };
 ```
 
@@ -80,3 +81,7 @@ run_test:
     - "# Run tests"
     - npx graphql-schema-linter /tmp/schema.graphql
 ```
+
+## Debounce fetch
+
+<https://gist.github.com/mnylen/e944cd4e3255f4421a0b>

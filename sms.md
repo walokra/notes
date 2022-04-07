@@ -2,12 +2,12 @@
 
 # Text message services
 
-* Twilio
-* Mailjet
-* MessageBird
-* Gateway API
-* Arena interactive
+- Gateway API (Danish)
+- Twilio
+- Mailjet
+- MessageBird
+- Arena interactive
 
 Notes:
 
-* Test beforehand how sending messages to relocated numbers work.
+- Test beforehand how sending messages to relocated numbers work.

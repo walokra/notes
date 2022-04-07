@@ -21,6 +21,8 @@ Visual Studio Code has become The Editor for many and it has many extensions whi
 
 [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
+[axe Accessibility Linter](https://marketplace.visualstudio.com/items?itemName=deque-systems.vscode-axe-linter)
+
 [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
 [Java Extension Pack](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
@@ -48,8 +50,8 @@ Visual Studio Code has become The Editor for many and it has many extensions whi
 [MongoDB](https://marketplace.visualstudio.com/items?itemName=mongodb.mongodb-vscode)
 
 [GraphQL](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql)
-[GraphQL for VSCode](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql)
-Apollo GraphQL for VS Code(https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo)
+[GraphQL for VSCode](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql) or
+[Apollo GraphQL for VS Code](https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo)
 Rich editor support for GraphQL client and server development that seamlessly integrates with the Apollo platform.
 
 ## Javascript
@@ -60,7 +62,7 @@ Rich editor support for GraphQL client and server development that seamlessly in
 
 ## User Interface specific
 
-[indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow )
+[indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
 A simple extension to make indentation more readable
 
 [Rainbow Brackets](https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets)

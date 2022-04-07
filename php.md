@@ -10,9 +10,10 @@ $this->container->logger->addWarning("# groups: " . print_r($groups, true));
 $this->container->logger->addWarning("Foo Bar");
 $this->container->logger->addWarning("" . print_r($currentUser, true));
 $this->container->logger->addWarning("user", $user);
- 
+
 ```
-## Log SQL Queries 
+
+## Log SQL Queries
 
 With Eloquent and Monolog:
 
@@ -39,6 +40,42 @@ $this->container->db->getConnection()->listen(function ($query) {
 
     $this->container->logger->debug("### SQL: time=" . $query->time . "ms; " . $boundSql . "###");
 });
+```
+
+```php
+$capsule->getConnection()->enableQueryLog();
+
+var_dump($this->container->db->getConnection()->getQueryLog());
+```
+
+```php
+// database
+$capsule = new Manager;
+$capsule->addConnection($container->get('settings')['database']);
+// log all
+$capsule->getConnection("default")->enableQueryLog();
+$capsule->setAsGlobal();
+$capsule->getConnection()->setEventDispatcher(new \Illuminate\Events\Dispatcher);
+$capsule->getConnection()->listen(function ($query) {
+    // Format binding data for sql insertion
+    foreach ($query->bindings as $i => $binding) {
+        if ($binding instanceof \DateTime) {
+            $query->bindings[$i] = $binding->format('\'Y-m-d H:i:s\'');
+        } else {
+            if (is_string($binding)) {
+                $query->bindings[$i] = "'$binding'";
+            }
+        }
+    }
+
+    // Insert bindings into query
+    $boundSql = str_replace(['%', '?'], ['%%', '%s'], $query->sql);
+    $boundSql = vsprintf($boundSql, $query->bindings);
+    // UNBOUND QUERY = " . $query->sql
+
+    $this->container->logger->debug("### SQL: time=" . $query->time . "ms; " . $boundSql . "###");
+});
+$capsule->bootEloquent();
 ```
 
 ## Strip special characters
