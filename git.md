@@ -9,6 +9,14 @@ cd ~/projects/$GHORG
 gh api 'orgs/$GHORG/repos?private=true&per_page=1000' | jq -r '.[].ssh_url' | xargs -P $(nproc --all) -L1 git clone
 ```
 
+## Squash
+
+Squash several commits to one or two commits with new messages:
+
+```
+git reset --soft HEAD~7 && git add --all && git commit -m "New message here"
+```
+
 ## Git aliases
 
 (git kit)[https://github.com/akx/git-kit]
