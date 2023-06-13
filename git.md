@@ -1,5 +1,11 @@
 # Git
 
+## Rewrite N commits
+
+```
+git rebase -i HEAD~6 -x "git commit --amend --reset-author --no-edit"
+```
+
 ## Clone all repositories from organisation
 
 ```shell

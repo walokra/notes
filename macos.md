@@ -7,3 +7,10 @@ codesign --remove-signature /Applications/Visual\ Studio\ Code.app/Contents/Fram
 ```
 
 See: <https://shageevan.medium.com/vs-codes-in-built-terminal-is-slow-or-laggy-on-macos-big-sur-d5867a7d9771>
+
+
+## Delete DS_Store
+
+```
+find . -type f -name .DS_Store -exec rm -i {} \;
+```
